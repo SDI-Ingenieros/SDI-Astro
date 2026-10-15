@@ -1,0 +1,71 @@
+---
+const features = [
+  {
+    title: "Proyectos a precio justo",
+    description: "Trabajamos con presupuestos claros y sin sorpresas. ¡Sabemos que la transparencia es clave!",
+    icon: "M15 17C15 15.343 13.657 14 12 14M12 14C10.343 14 9 15.343 9 17C9 18.657 10.343 20 12 20C13.657 20 15 21.343 15 23C15 24.657 13.657 26 12 26M12 14V13M12 26C10.343 26 9 24.657 9 23M12 26V27M22 31H31V29M25 26H31V24M26 21H31V19M26 16H31V14M23 11H31V9M10 6H31V1H7V6M23 20C23 13.926 18.074 9 12 9C5.926 9 1 13.926 1 20C1 26.074 5.926 31 12 31C18.074 31 23 26.074 23 20Z",
+    color: "primary",
+    size: "32"
+  },
+  {
+    title: "Entrega puntual garantizada",
+    description: "Cumplimos tus plazos con responsabilidad, asegurando el éxito de tus proyectos.",
+    icon: "M16 3.0001C23.18 3.0001 29 8.8201 29 16.0001C29 23.1801 23.18 29.0001 16 29.0001C8.82 29.0001 3 23.1801 3 16.0001C3 8.8201 8.82 3.0001 16 3.0001ZM16 3.0001V1.0001M9.3115 27.1476L6.9995 31.0006M29.7686 7.879C30.5256 7.15 30.9996 6.133 30.9996 5C30.9996 2.79 29.2096 1 26.9996 1C25.8676 1 24.8496 1.475 24.1216 2.232M7.8789 2.2315C7.1499 1.4745 6.1329 1.0005 4.9999 1.0005C2.7899 1.0005 0.999901 2.7905 0.999901 5.0005C0.999901 6.1325 1.4749 7.1505 2.2319 7.8785M22 12.0001L14 20.0001L10 16.0001M25 31.0001L22.689 27.1481",
+    color: "secondary",
+    size: "32"  
+  },
+  {
+    title: "Ejecución ágil y eficiente",
+    description: "Nuestro equipo combina experiencia y tecnología para entregar resultados rápidos y de calidad.",
+    icon: "M25 7H31M25 23H31M28 11H31M28 15H31M28 19H31M28 27H31M13 11V31L17 30.977V2C17 1.447 17.447 1 18 1H30C30.553 1 31 1.447 31 2V31H28M13 11L7 13M13 11L7 1L1 11M7 31V13M7 13L1 11M4 6H10M1 11V29",
+    color: "accent",
+    size: "32"
+  },
+];
+---
+
+<section id="features" class="section bg-gray-50 dark:bg-gray-800/50">
+  <div class="container-custom">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-300 font-medium text-sm mb-4">
+        Porque nosotros
+      </span>
+      <h2 class="mb-6 text-gray-900 dark:text-white">Somos su mejor opcion</h2>
+      <p class="text-gray-600 dark:text-gray-300">
+        Somos un equipo especializado para asegurar la seguridad de tus sistemas electricos.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature, index) => (
+        <div 
+          class="card p-6 border border-gray-200 dark:border-gray-700 slide-up" 
+          style={`animation-delay: ${index * 100}ms`}
+        >
+          <div class={`w-12 h-12 rounded-lg bg-${feature.color}-100 dark:bg-${feature.color}-900/30 flex items-center justify-center mb-6`}>
+            <svg 
+              class={`w-6 h-6 text-${feature.color}-600 dark:text-${feature.color}-400`} 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox={`0 0 ${feature.size} ${feature.size}`} 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon}></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{feature.title}</h3>
+          <p class="text-gray-600 dark:text-gray-300">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+    
+    <!-- <div class="mt-16 text-center">
+      <a href="/features" class="btn-primary">
+        Explore All Features
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div> -->
+  </div>
+</section>
