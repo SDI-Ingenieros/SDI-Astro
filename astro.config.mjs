@@ -5,8 +5,8 @@ import alpinejs from '@astrojs/alpinejs';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://migueldelgado27.github.io/",
-  base: "",
+  site: "https://sdi-ingenieros.github.io/",
+  base: "SDI-Astro",
   vite: {
     plugins: [tailwindcss()],
   },
